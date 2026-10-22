@@ -1,0 +1,16 @@
+# 古蹟探險家：oe init --preset heritage 複製成網站資料夾的 project.yaml
+名稱: 古蹟探險家
+代號: heritage
+網址: https://heritage.hunglun.com
+schema: heritage
+轉接器: boch_assets
+批次大小: 25
+資料集:
+  - {id: "6246", 存檔名: assets, 格式: JSON}   # 文化部文化資產局 古蹟（data.boch.gov.tw assetsCase/1.1.json）
+快取: D:\lun-heritage-cache   # 照片原圖（可重抓，不放 ClaudeOnly）
+# 發布（scripts/publish-public.sh、scripts/cfenv.sh 讀這幾行）
+發布repo: hunglun2026/lun-heritage
+憑證名稱: hunglun2026            # steve0802\cf-tokens.txt 與 gh-tokens.txt 的鍵（gh 用「<名稱>-workflow」那把，能推 .github）
+Cloudflare帳號編號: d286dc43743f9a5e5dea99efea359ee5
+Worker名稱: heritage-explorer
+網域: heritage.hunglun.com

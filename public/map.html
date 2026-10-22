@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>我家附近的古蹟｜古蹟探險家</title>
+<meta name="description" content="在臺灣地圖上找古蹟：選縣市、鄉鎮，或讓瀏覽器找出離你最近的古蹟。">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/fonts.css?v=1">
+<link rel="stylesheet" href="/css/base.css?v=1">
+<link rel="stylesheet" href="/css/site.css?v=1">
+</head>
+<body data-page="map">
+<main>
+  <h1>🗺️ 我家附近的古蹟</h1>
+  <p class="lead">選你住的縣市和鄉鎮，地圖上會亮出那裡的古蹟。也可以按「找我附近的」，用這台裝置的位置找出最近的古蹟（位置只在這台裝置上計算，不會傳出去）。</p>
+  <div class="form-row">
+    <label>縣市<select id="city" class="inline"><option value="">全部縣市</option></select></label>
+    <label>鄉鎮市區<select id="dist" class="inline"><option value="">全部</option></select></label>
+    <button class="btn" id="locate" type="button">📍 找我附近的</button>
+  </div>
+  <p id="count" class="lead" aria-live="polite"></p>
+  <div class="mapwrap"><div id="mapbox"></div><div class="near" id="list"></div></div>
+</main>
+<script src="/js/site.js?v=1"></script>
+<script src="/js/core/app.js?v=1"></script>
+<script src="/js/core/layout.js?v=1"></script>
+<script src="/js/core/fx.js?v=1"></script>
+<script src="/js/core/progress.js?v=1"></script>
+<script src="/js/p-map.js?v=1"></script>
+</body>
+</html>

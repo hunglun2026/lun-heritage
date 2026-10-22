@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>古蹟圖鑑｜古蹟探險家</title>
+<meta name="description" content="搜尋與篩選臺灣 1,065 處古蹟：寺廟、宅第、城門、車站、燈塔，依程度看白話介紹或文資局原文，還能挑兩處比一比。">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/fonts.css?v=1">
+<link rel="stylesheet" href="/css/base.css?v=1">
+<link rel="stylesheet" href="/css/site.css?v=1">
+</head>
+<body data-page="sites">
+<main>
+  <h1>📖 古蹟圖鑑</h1>
+  <p class="lead">輸入名字或地名找古蹟，或用下面的按鈕篩選。點一下看詳細介紹，還可以挑兩處「比一比」。介紹的深淺跟著頁首的「程度」變。</p>
+  <section id="cmp" hidden></section>
+  <input type="search" id="q" placeholder="輸入名字或地名，例如：赤嵌樓、鹿港" aria-label="搜尋古蹟">
+  <div class="filters" id="filters"></div>
+  <p id="count" class="lead" aria-live="polite"></p>
+  <div class="grid" id="grid"></div>
+  <div class="more" id="more" hidden><button class="btn big" type="button">再看更多</button></div>
+  <div id="cmpbar" class="cmpbar noprint" hidden></div>
+  <dialog id="dlg"><div class="dlg-in" id="dlg-body"></div></dialog>
+</main>
+<script src="/js/site.js?v=1"></script>
+<script src="/js/core/app.js?v=1"></script>
+<script src="/js/core/layout.js?v=1"></script>
+<script src="/js/core/fx.js?v=1"></script>
+<script src="/js/core/progress.js?v=1"></script>
+<script src="/js/p-sites.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+[
+ {
+  "do": "goto",
+  "url": "http://127.0.0.1:8830/"
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];localStorage.setItem('heritage-level','e');return '程度=e'})()"
+ },
+ {
+  "do": "goto",
+  "url": "http://127.0.0.1:8830/"
+ },
+ {
+  "do": "assert_text",
+  "text": "八個學習工具"
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];const t=$$('#today .acard').length;$('[data-who=student]').click();await w(100);$('[data-lv=e]').click();await w(100);return '首頁：今天卡片='+t+' 推薦='+$$('#g-recs .tool').length+' 有分級介紹數字='+$('[data-w=rewritten]').textContent})()"
+ },
+ {
+  "do": "shot",
+  "path": "D:\\claude測試資料\\lun-heritage\\2026-10-22\\01-home.png",
+  "full": true
+ },
+ {
+  "do": "goto",
+  "url": "http://127.0.0.1:8830/sites"
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];const n=$$('#grid .acard').length;$('#grid .acard').click();await wf('#introtext');return '圖鑑：卡片='+n+' 詳情標題='+$('#dlg h2').textContent.trim()+' 介紹字數='+$('#introtext').textContent.length+' 照片出處='+($('.credit').textContent.slice(0,20))})()"
+ },
+ {
+  "do": "shot",
+  "path": "D:\\claude測試資料\\lun-heritage\\2026-10-22\\02-sites-detail.png",
+  "full": true
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];$('#x').click();const c=[...$$('.chip')].find(b=>b.textContent.includes('寺廟'));c.click();await w(200);const a=$('#count').textContent;c.click();const q=$('#q');q.value='仁武';q.dispatchEvent(new Event('input'));await w(200);return '篩選寺廟：'+a+'；搜尋仁武：'+$('#count').textContent})()"
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];const q=$('#q');q.value='';q.dispatchEvent(new Event('input'));$('#done').click();await w(200);const a=$('#count').textContent;const t=[...$$('#grid .acard')].find(x=>x.classList.contains('thin'));return '只看有分級介紹：'+a+' 還有整理中的卡片='+!!t})()"
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];$('#done').click();await w(200);const t=[...$$('#grid .acard')].find(x=>x.classList.contains('thin'));t.click();await wf('#origtext');for(let i=0;i<50&&$('#origtext').textContent==='載入中…';i++)await w(100);return '整理中的古蹟：提示='+$('.note').textContent.slice(0,16)+' 原文字數='+$('#origtext').textContent.length})()"
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];$('#x').click();const cs=$$('#grid .acard');cs[0].click();await wf('#add');$('#add').click();$('#x').click();cs[1].click();await wf('#add');$('#add').click();$('#go-cmp').click();await wf('table.cmp');return '比一比：表格列數='+$$('table.cmp tbody tr').length})()"
+ },
+ {
+  "do": "shot",
+  "path": "D:\\claude測試資料\\lun-heritage\\2026-10-22\\03-sites-compare.png",
+  "full": true
+ },
+ {
+  "do": "goto",
+  "url": "http://127.0.0.1:8830/"
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];localStorage.setItem('heritage-level','s');return '程度=s'})()"
+ },
+ {
+  "do": "goto",
+  "url": "http://127.0.0.1:8830/sites#19980430000001"
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];await wf('#introtext');for(let i=0;i<50&&$('#introtext').textContent.length<200;i++)await w(100);return '高中：介紹（原文）字數='+$('#introtext').textContent.length+' 探究題='+!![...$$('.fact h4')].find(h=>h.textContent==='探究題')})()"
+ },
+ {
+  "do": "goto",
+  "url": "http://127.0.0.1:8830/"
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];localStorage.setItem('heritage-level','k');return '程度=k'})()"
+ },
+ {
+  "do": "goto",
+  "url": "http://127.0.0.1:8830/sites"
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];const n=$$('#grid .acard').length;$('#grid .acard').click();await wf('#introtext');return '幼兒園：卡片='+n+' 介紹='+$('#introtext').textContent+' 喇叭鈕顯示='+!$('#say1 .say').hidden})()"
+ },
+ {
+  "do": "goto",
+  "url": "http://127.0.0.1:8830/"
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];localStorage.setItem('heritage-level','e');return '程度=e'})()"
+ },
+ {
+  "do": "goto",
+  "url": "http://127.0.0.1:8830/map"
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];const d=$$('.map .dot').length;const s=$('#city');s.value='臺北市';s.onchange();await w(200);return '地圖：點='+d+' 選臺北市：'+$('#count').textContent+' 清單='+$$('#list .nrow').length+' 變淡的點='+$$('.map .dot.dim').length})()"
+ },
+ {
+  "do": "shot",
+  "path": "D:\\claude測試資料\\lun-heritage\\2026-10-22\\04-map.png",
+  "full": true
+ },
+ {
+  "do": "goto",
+  "url": "http://127.0.0.1:8830/"
+ },
+ {
+  "do": "goto",
+  "url": "http://127.0.0.1:8830/map#19980430000001"
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];await w(300);return '從圖鑑點進地圖：標出的點='+$$('.map .dot.on').length+' 清單第一筆='+$('#list .nrow b').textContent})()"
+ },
+ {
+  "do": "goto",
+  "url": "http://127.0.0.1:8830/types"
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];$('#std').click();await w(200);for(let i=0;i<80&&!$('#again');i++){const o=$('.opt:not([disabled])');if(o)o.click();await w(150);const n=$('#nx button');if(n)n.click();await w(150);}return '認類型：成績='+($('.score')||{}).textContent+' 星數畫面='+!!$('.stars')})()"
+ },
+ {
+  "do": "shot",
+  "path": "D:\\claude測試資料\\lun-heritage\\2026-10-22\\05-types-result.png",
+  "full": true
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];$('#again').click();await w(200);const e=$('#era');if(!e)return '哪個時代蓋的：題目不夠，按鈕沒出現';e.click();await w(200);$('.opt').click();await w(200);return '哪個時代蓋的：解說='+$('#fb').textContent.slice(0,40)})()"
+ },
+ {
+  "do": "goto",
+  "url": "http://127.0.0.1:8830/timeline"
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];$('#go').click();await w(200);for(let r=0;r<5;r++){const cs=$$('.tl-card');if(!cs.length)break;for(const c of cs){c.click();await w(80);}await w(150);const n=$('#nx button');if(n)n.click();await w(200);}return '時代排排看：'+(($('.score')||{}).textContent||$('#root').textContent.slice(0,40))})()"
+ },
+ {
+  "do": "shot",
+  "path": "D:\\claude測試資料\\lun-heritage\\2026-10-22\\06-timeline-result.png",
+  "full": true
+ },
+ {
+  "do": "goto",
+  "url": "http://127.0.0.1:8830/timeline"
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];const d=await App.load();const y=n=>d.items.find(a=>a.name===n).year;$('#go').click();await w(200);for(let r=0;r<5;r++){const cs=$$('.tl-card');if(!cs.length)break;cs.sort((p,q)=>y(p.querySelector('b').textContent)-y(q.querySelector('b').textContent));for(const c of cs){c.click();await w(60);}await w(150);const n=$('#nx button');if(n)n.click();await w(200);}return '時代排排看（照年代點）：'+(($('.score')||{}).textContent)+' 星='+$('.stars').getAttribute('aria-label')})()"
+ },
+ {
+  "do": "goto",
+  "url": "http://127.0.0.1:8830/guess"
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];$('#solo').click();await w(200);for(let i=0;i<80&&!$('#again');i++){const o=$('.opt:not([disabled])');if(o)o.click();await w(150);const n=$('#nx button');if(n)n.click();await w(150);}return '猜謎：成績='+($('.score')||{}).textContent})()"
+ },
+ {
+  "do": "goto",
+  "url": "http://127.0.0.1:8830/guess"
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];$('#class').click();await w(200);$('#more').click();$('#more').click();await w(100);const n=$$('.clue').length;$('#rev').click();await w(100);return '全班搶答：線索='+n+' 揭曉='+$('#ans').textContent})()"
+ },
+ {
+  "do": "goto",
+  "url": "http://127.0.0.1:8830/memory"
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];$('[data-m=easy]').click();await w(300);return '翻牌：牌數='+$$('.mcard').length})()"
+ },
+ {
+  "do": "shot",
+  "path": "D:\\claude測試資料\\lun-heritage\\2026-10-22\\07-memory.png",
+  "full": true
+ },
+ {
+  "do": "goto",
+  "url": "http://127.0.0.1:8830/passport"
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];return '護照：看過='+$$('.w-num')[0].textContent+' 拿到徽章='+$$('.bdg.got').length+' 遊戲紀錄有星='+$$('.gtable td').filter(t=>t.textContent.includes('⭐')).length})()"
+ },
+ {
+  "do": "shot",
+  "path": "D:\\claude測試資料\\lun-heritage\\2026-10-22\\08-passport.png",
+  "full": true
+ },
+ {
+  "do": "goto",
+  "url": "http://127.0.0.1:8830/teacher"
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];$('#make').click();await w(300);const n=$$('#sheet .q').length;$('#key').click();await w(100);return '學習單：題目='+n+' 顯示答案='+$$('#sheet .ans:not([hidden])').length+' 列印鈕='+!$('#print').hidden})()"
+ },
+ {
+  "do": "shot",
+  "path": "D:\\claude測試資料\\lun-heritage\\2026-10-22\\09-teacher-sheet.png",
+  "full": true
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];$$('.tab')[1].click();await w(100);return '計分板：組數='+$$('.team').length})()"
+ },
+ {
+  "do": "goto",
+  "url": "http://127.0.0.1:8830/help"
+ },
+ {
+  "do": "eval",
+  "expr": "(async()=>{const w=ms=>new Promise(r=>setTimeout(r,ms));const wf=async q=>{for(let i=0;i<100&&!document.querySelector(q);i++)await w(100);return document.querySelector(q)};const rd=async()=>{for(let i=0;i<150&&!document.documentElement.dataset.ready;i++)await w(100)};await rd();const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];$('#report').click();await w(200);$('#rp').value='測試回報：第一批改寫抽查';$('dialog [data-v=\"1\"]').click();await w(500);return '回報錯誤：'+(($('dialog.zdlg p')||{}).textContent||'沒有感謝訊息')})()"
+ }
+]
