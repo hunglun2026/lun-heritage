@@ -27,9 +27,8 @@
 
   const foot = document.createElement("footer");
   foot.className = "foot";
-  foot.innerHTML = S.footer + '<p id="data-stamp">資料載入中…</p>' +
-    '<p><button class="btn" id="report" type="button">回報內容錯誤</button></p>' +
-    "<p>" + App.esc(S.maker || "") + "；本站不蒐集任何個人資料，學習進度只存在這台裝置的瀏覽器裡。</p>";
+  foot.innerHTML = "<p>由政府資料獲取</p>" + '<p id="data-stamp" hidden></p>' +
+    '<p><button class="btn" id="report" type="button">回報內容錯誤</button></p>';
   wrap.appendChild(foot);
 
   // 回報錯誤：送到 Worker /report（轉 ntfy），不收姓名與聯絡方式
