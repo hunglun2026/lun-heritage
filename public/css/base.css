@@ -54,7 +54,7 @@ a.btn{text-decoration:none;display:inline-block;line-height:1.4}
 .acard:hover{border-color:var(--green)}
 .acard .photo,.acard .ph{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
 .acard .info{padding:8px 12px 12px}
-.acard b{display:block;font-size:1.05rem}
+.acard .info>b{display:block;font-size:1.05rem}
 .acard small{color:var(--ink2)}
 .ph{display:grid;place-items:center;font-size:3.4rem}
 .ph.xl{font-size:7rem;aspect-ratio:4/3}
@@ -200,7 +200,7 @@ table.cmp .photo,table.cmp .ph{width:100%;aspect-ratio:4/3;object-fit:cover;bord
 /* 幼兒園：藏掉文字多的東西、字放大 */
 html[data-level="k"] .nokid,html[data-level="k"] [data-nokid]{display:none!important}
 html[data-level="k"] .opt{font-size:1.4rem;min-height:72px}
-html[data-level="k"] .acard b{font-size:1.25rem}
+html[data-level="k"] .acard .info>b{font-size:1.25rem}
 html[data-level="k"] .intro p{font-size:1.5rem;line-height:1.6}
 /* 喇叭鈕（只有幼兒園顯示） */
 .say{font:inherit;font-size:1.4rem;border:3px solid var(--orange);background:#fff;border-radius:50%;width:52px;height:52px;cursor:pointer;vertical-align:middle;box-shadow:0 3px 0 var(--orange)}
@@ -328,3 +328,22 @@ details.orig summary{cursor:pointer;font-weight:700}
 footer.foot{margin-top:40px;padding:24px 16px 26px;background:#f3f1ec;color:#4b5057;text-align:center;border:1px solid #e4dfd3;border-radius:14px;font-size:.85rem}
 footer.foot .foot-brand img{height:56px;width:auto;max-width:100%}
 footer.foot .foot-copy{margin:.8em auto 0;max-width:48em;line-height:1.7;color:#4b5057}
+
+/* 注音排版（搬自動物探險家，port_zhuyin.py 加入）：符號直排在字右邊，聲調在符號右側最後一格，輕聲在符號上方 */
+ruby{display:inline-flex;align-items:center;vertical-align:baseline;margin-right:.1em;line-height:1.2;min-height:1.55em}
+.zyw{line-height:1.75}
+rt{display:inline-flex;align-items:stretch;font-size:.52em;color:var(--ink,#222);font-weight:500;line-height:1;white-space:nowrap;margin-left:.08em}
+rt b{writing-mode:vertical-rl;text-orientation:upright;font-weight:500;letter-spacing:-.06em;font-size:1em!important;display:inline!important;line-height:1!important;margin:0!important}
+rt i{font-style:normal;align-self:flex-end;margin-left:.02em;line-height:.8}
+rt.q{flex-direction:column;align-items:center}
+rt u{text-decoration:none;line-height:.8}
+
+/* 卡片：寬螢幕一列 4 張；低年級名字依字數縮小到一行放得下（--n 由 zhuyin.js 寫入）（搬自動物探險家，port_zhuyin.py 加入） */
+.acard .info>b{text-wrap:balance}
+@media (min-width:1000px){.grid{grid-template-columns:repeat(4,1fr);gap:16px 12px}}
+html[data-grade=low] .acard .info{padding:12px 10px 16px 14px}
+html[data-grade=low] .acard .info>b{line-height:1.9}
+@media (min-width:601px){
+  html[data-grade=low] .acard .info{container-type:inline-size}
+  html[data-grade=low] .acard .info>b{font-size:clamp(.8rem,calc(100cqw / (var(--n,5) * 1.95)),1.1rem)}
+}

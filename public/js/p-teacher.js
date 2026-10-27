@@ -30,7 +30,7 @@ App.boot(function (data) {
     if (lv === "k") return [["圈圈看：這是不是" + a.type + "？　是　／　不是", "是"]];
     const qs = [["這處古蹟是哪一種？＿＿＿＿＿＿", a.type], ["用一句話說說它特別的地方：", a.c ? a.c[0] : ""]];
     if (lv !== "e" && a.eraInfo) qs.push(["它是哪個時期蓋的？＿＿＿＿＿＿", a.eraInfo.name + "（原文：" + a.attrs.year_src + "）"]);
-    if (lv === "s" && a.q) qs.push(["探究題：" + a.q, "（開放作答）"]);
+    if (lv === "__off__" && a.q) qs.push(["探究題：" + a.q, "（開放作答）"]);
     return qs;
   }
   const sheet = document.getElementById("sheet");

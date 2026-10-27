@@ -6,8 +6,8 @@
 <title>古蹟探險家｜認識臺灣 1,065 處古蹟</title>
 <meta name="description" content="用文化部文化資產局的開放資料，認識臺灣 1,065 處古蹟：寺廟、宅第、城門、車站、燈塔。幼兒園到高中四種程度，地圖找家附近的古蹟，還有認類型、時代排排看、猜謎和學習單。">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/css/fonts.css?v=1">
-<link rel="stylesheet" href="/css/base.css?v=5">
+<link rel="stylesheet" href="/css/fonts.css?v=2">
+<link rel="stylesheet" href="/css/base.css?v=6">
 <link rel="stylesheet" href="/css/site.css?v=1">
 </head>
 <body data-page="home">
@@ -22,7 +22,7 @@
   <!-- 引導入口：回答兩題（身分、程度），推薦從哪裡開始。程式在 p-home.js，選過的會記在這台裝置 -->
   <section class="w-guide" id="start" aria-labelledby="g-title">
     <h2 id="g-title"><span class="nobr">不知道從哪裡開始？</span><span class="nobr">回答兩個問題</span></h2>
-    <p class="lead"><span class="nobr">選完會推薦最適合的工具，</span><span class="nobr">程度也會自動設好。</span></p>
+    <p class="lead"><span class="nobr">選完會推薦最適合的工具，</span><span class="nobr">年級也會自動設好。</span></p>
     <div class="g-step" data-step="who">
       <p class="g-q"><small>第 1 題，共 2 題</small>你是…</p>
       <div class="g-opts">
@@ -33,10 +33,9 @@
     <div class="g-step" data-step="lv" hidden>
       <p class="g-q"><small>第 2 題，共 2 題</small><span id="g-lvq">你幾年級？</span></p>
       <div class="g-opts">
-        <button class="g-opt" type="button" data-lv="k"><span class="e" aria-hidden="true">🧸</span><b>幼兒園</b><small>看照片、聽聲音，不用認字</small></button>
-        <button class="g-opt" type="button" data-lv="e"><span class="e" aria-hidden="true">🌱</span><b>國小</b><small>三選一，附白話介紹</small></button>
-        <button class="g-opt" type="button" data-lv="j"><span class="e" aria-hidden="true">📗</span><b>國中</b><small>四選一，可以展開讀原文</small></button>
-        <button class="g-opt" type="button" data-lv="s"><span class="e" aria-hidden="true">🎓</span><b>高中</b><small>讀文資局原文，做探究題</small></button>
+        <button class="g-opt" type="button" data-lv="e"><span class="e" aria-hidden="true">🌱</span><b>低年級</b><small>有注音，三選一，附白話介紹</small></button>
+        <button class="g-opt" type="button" data-lv="j"><span class="e" aria-hidden="true">📗</span><b>中年級</b><small>三選一，附白話介紹</small></button>
+        <button class="g-opt" type="button" data-lv="s"><span class="e" aria-hidden="true">🎓</span><b>高年級</b><small>四選一，古蹟更多更細</small></button>
       </div>
       <div class="g-nav"><button class="btn" type="button" data-back>← 上一步</button></div>
     </div>
@@ -60,18 +59,19 @@
     <a class="tool w-reveal" href="/sites"><div class="ico">📖</div><h3>古蹟圖鑑</h3><p>照片、白話介紹、建造年代、開放參觀，還能挑兩處比一比。</p><span class="tag">認識古蹟</span></a>
     <a class="tool w-reveal" style="--delay:2" href="/types"><div class="ico">🧩</div><h3>看建築認類型</h3><p>寺廟、教堂、車站、牌坊、燈塔，看照片分一分，還有 60 秒挑戰。</p><span class="tag">觀察分類</span></a>
     <a class="tool w-reveal" style="--delay:3" href="/timeline"><div class="ico">⏳</div><h3>時代排排看</h3><p>四處古蹟誰最早蓋好？認識荷西、明鄭、清領、日治、戰後。</p><span class="tag">歷史時序</span></a>
-    <a class="tool w-reveal" href="/guess"><div class="ico">🔍</div><h3>猜猜我是誰</h3><p>線索一個一個出現；幼兒園是聽名字找照片。可以投影全班搶答。</p><span class="tag">觀察推理</span></a>
+    <a class="tool w-reveal" href="/guess"><div class="ico">🔍</div><h3>猜猜我是誰</h3><p>線索一個一個出現。可以投影全班搶答。</p><span class="tag">觀察推理</span></a>
     <a class="tool w-reveal" style="--delay:2" href="/passport"><div class="ico">🎫</div><h3>探險護照</h3><p>看過的古蹟會蓋章，玩遊戲拿星星換徽章。</p><span class="tag">自主學習</span></a>
     <a class="tool w-reveal" style="--delay:3" href="/teacher"><div class="ico">🍎</div><h3>教師專區</h3><p>依縣市或類型產生學習單、搶答計分板。</p><span class="tag">備課好幫手</span></a>
   </div>
   <section class="w-end w-reveal"><h2>來認識臺灣的古蹟吧</h2><p><a class="btn primary big" href="/sites">打開古蹟圖鑑 🏛️</a></p></section>
   <dialog id="dlg"><div class="dlg-in" id="dlg-body"></div></dialog>
 </main>
-<script src="/js/site.js?v=3"></script>
-<script src="/js/core/app.js?v=1"></script>
-<script src="/js/core/layout.js?v=7"></script>
+<script src="/js/site.js?v=4"></script>
+<script src="/js/core/app.js?v=2"></script>
+<script src="/js/core/layout.js?v=8"></script>
 <script src="/js/core/fx.js?v=1"></script>
+<script src="/js/zhuyin.js?v=1"></script>
 <script src="/js/core/progress.js?v=1"></script>
-<script src="/js/p-home.js?v=3"></script>
+<script src="/js/p-home.js?v=4"></script>
 </body>
 </html>

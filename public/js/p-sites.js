@@ -113,7 +113,7 @@ App.boot(function (data) {
         fact("所在地", esc(a.place) + (a.lat != null ? '　<a href="/map#' + a.id + '">在地圖上看</a>' : "")) +
         fact("建造年代（原文）", a.attrs.year_src ? esc(a.attrs.year_src) : NONE) +
         fact("開放參觀", esc(a.attrs.open || NONE)) + "</div>") +
-      (a.done && lv === "s" && a.q ? '<div class="fact"><h4>探究題</h4><p>' + esc(a.q) + "</p></div>" : "") +
+      (a.done && lv === "__off__" && a.q ? '<div class="fact"><h4>探究題</h4><p>' + esc(a.q) + "</p></div>" : "") +
       (!kid && (lv === "j" || thin) ? '<details class="orig"' + (thin ? " open" : "") + '><summary>看原始資料（文資局原文）</summary><p id="origtext">載入中…</p></details>' : "") +
       (kid ? "" : '<p class="credit">' + source(a) + "</p>");
     if (a.done) body.querySelector("#introtext").textContent = App.intro(a, lv);
@@ -126,11 +126,11 @@ App.boot(function (data) {
     body.parentElement.scrollTop = 0;
     if (kid) App.say(a.name);
     // 原文分檔載入：高中看原文、國中與整理中的展開原文
-    if (lv === "s" || body.querySelector("#origtext")) {
+    if (lv === "__off__" || body.querySelector("#origtext")) {
       const orig = await App.loadOrig(a);
       const o = body.querySelector("#origtext");
       if (o) o.textContent = orig || NONE;
-      if (a.done && lv === "s") body.querySelector("#introtext").textContent = App.intro(a, lv);
+      if (a.done && lv === "__off__") body.querySelector("#introtext").textContent = App.intro(a, lv);
     }
   }
   dlg.addEventListener("close", () => history.replaceState(null, "", location.pathname + location.search));

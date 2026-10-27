@@ -7,12 +7,11 @@
   if (!S) throw new Error("缺 /js/site.js（window.SITE）");
   const P = S.key + "-"; // localStorage 前綴，每站分開
 
-  // ---- 四級難度：存在 localStorage，頁首可切換；幼兒園只開看圖的遊戲 ----
+  // ---- 三個年級（跟動物探險家一樣：低、中、高年級；低年級有注音）：存在 localStorage，頁首可切換 ----
   const LEVELS = {
-    k: { name: "幼兒園", choices: 3, kid: true },
-    e: { name: "國小", choices: 3 },
-    j: { name: "國中", choices: 4 },
-    s: { name: "高中", choices: 4 },
+    e: { name: "低年級", choices: 3 },
+    j: { name: "中年級", choices: 3 },
+    s: { name: "高年級", choices: 4 },
   };
   function level() {
     try { const v = localStorage.getItem(P + "level"); if (LEVELS[v]) return v; } catch (e) { /* 無痕模式 */ }
@@ -26,7 +25,6 @@
   function intro(a, lv) {
     lv = lv || level();
     if (lv === "k") return a.k || "";
-    if (lv === "s" && a.orig) return a.orig;
     return a.e || a.k || "";
   }
 

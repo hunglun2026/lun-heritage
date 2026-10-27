@@ -37,7 +37,7 @@
   guide.querySelectorAll("[data-who]").forEach((b) => (b.onclick = () => {
     who = b.dataset.who;
     App.store.set("guide", who);
-    document.getElementById("g-lvq").textContent = who === "teacher" ? "你教哪個程度？" : "你幾年級？";
+    document.getElementById("g-lvq").textContent = who === "teacher" ? "你教哪個年級？" : "你幾年級？";
     guide.querySelectorAll("[data-lv]").forEach((x) => x.setAttribute("aria-pressed", String(x.dataset.lv === App.level())));
     show("lv");
   }));
