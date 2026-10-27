@@ -62,9 +62,8 @@
       ["types", "看建築認類型", "/types", true],
       ["timeline", "時代排排看", "/timeline", false],
       ["guess", "猜猜我是誰", "/guess", true],
-      ["memory", "翻牌配對", "/memory", true],
       ["passport", "探險護照", "/passport", true],
-      ["teacher", "老師專區", "/teacher", false],
+      ["teacher", "教師專區", "/teacher", false],
       ["help", "使用說明", "/help", true],
     ],
     footer:
@@ -98,7 +97,6 @@
     games: [
       ["types", "看建築認類型"], ["types-timed", "看建築認類型・60 秒"], ["era", "哪個時代蓋的"],
       ["timeline", "時代排排看"], ["guess", "猜猜我是誰"], ["guess-kid", "找找看（幼兒園）"],
-      ["memory-easy", "翻牌配對・入門"], ["memory-hard", "翻牌配對・挑戰"],
     ],
     badges(seen, st) {
       const cities = new Set(seen.map((a) => a.city));
@@ -113,7 +111,6 @@
         ["⏳", "時光旅人", "時代排排看拿到三顆星", st("timeline") >= 3],
         ["🕵️", "觀察小偵探", "猜猜我是誰（或找找看）拿到三顆星", st("guess") >= 3 || st("guess-kid") >= 3],
         ["⚡", "閃電快手", "60 秒挑戰拿到三顆星", st("types-timed") >= 3],
-        ["🃏", "翻牌記憶王", "完成翻牌配對挑戰（8 對）", st("memory-hard") >= 1],
       ];
     },
   };

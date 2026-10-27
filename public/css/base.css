@@ -100,7 +100,7 @@ dialog::backdrop{background:rgba(10,30,40,.55)}
 .stars{font-size:2.4rem;letter-spacing:6px}
 .clue{background:var(--orange-l);border-radius:14px;padding:10px 16px;margin:8px auto;max-width:560px;font-size:1.15rem;text-align:left}
 
-/* 老師專區 */
+/* 教師專區 */
 .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
 .tab{font:inherit;font-weight:800;border:3px solid var(--line);background:#fff;border-radius:14px 14px 0 0;padding:8px 20px;cursor:pointer;min-height:48px}
 .tab[aria-selected="true"]{background:var(--green);color:#fff;border-color:var(--green)}

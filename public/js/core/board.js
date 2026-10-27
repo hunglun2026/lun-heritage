@@ -1,5 +1,5 @@
 /* 由 super-opendata-edu 的 site_template 產生（oe build 會覆蓋），不要在網站資料夾改。
-   老師專區的搶答計分板＋倒數計時器。Board.init(root)。資料只存在這台裝置的 localStorage，不上傳。 */
+   教師專區的搶答計分板＋倒數計時器。Board.init(root)。資料只存在這台裝置的 localStorage，不上傳。 */
 window.Board = (function () {
   "use strict";
   const KEY = "board-v1";
