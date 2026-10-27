@@ -58,13 +58,11 @@
     // [頁面代號, 名稱, 網址, 幼兒園也顯示嗎]
     nav: [
       ["sites", "古蹟圖鑑", "/sites", true],
-      ["map", "我家附近的古蹟", "/map", true],
       ["types", "看建築認類型", "/types", true],
       ["timeline", "時代排排看", "/timeline", false],
       ["guess", "猜猜我是誰", "/guess", true],
       ["passport", "探險護照", "/passport", true],
       ["teacher", "教師專區", "/teacher", false],
-      ["help", "使用說明", "/help", true],
     ],
     footer:
       "<p>古蹟資料來自" +
