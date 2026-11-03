@@ -1,0 +1,19 @@
+# 古蹟探險家
+
+> 認識臺灣 1,065 處古蹟，看建築、排年代、找找我家附近。
+
+鴻綸科技（https://www.hunglun.com/）製作的免費學習網站，免註冊、免安裝，收錄於官網學習專區 https://www.hunglun.com/tools/games 。
+
+## 頁面
+- [猜猜我是誰](https://heritage.hunglun.com/guess): 線索一個一個出現，猜猜是哪一處古蹟。可以投影全班搶答；幼兒園是聽名字找照片。
+- [使用說明](https://heritage.hunglun.com/help): 古蹟探險家每個工具怎麼用：古蹟圖鑑、我家附近的古蹟、看建築認類型、時代排排看、猜猜我是誰、探險護照、教師專區，以及資料從哪裡來。
+- [古蹟探險家](https://heritage.hunglun.com/home): 用文化部文化資產局的開放資料，認識臺灣 1,065 處古蹟：寺廟、宅第、城門、車站、燈塔。國小低中高年級四種程度，地圖找家附近的古蹟，還有認類型、時代排排看、猜謎和學習單。
+- [古蹟探險家](https://heritage.hunglun.com/): 認識臺灣 1,065 處古蹟，看建築、排年代、找找我家附近。
+- [我家附近的古蹟](https://heritage.hunglun.com/map): 在臺灣地圖上找古蹟：選縣市、鄉鎮，或讓瀏覽器找出離你最近的古蹟。
+- [翻牌配對](https://heritage.hunglun.com/memory): 古蹟照片配名字的翻牌遊戲，幼兒園是照片配照片，翻開會唸名字。
+- [資料開放宣告](https://heritage.hunglun.com/open-data): 古蹟探險家的資料來源、授權方式與著作權說明。
+- [探險護照](https://heritage.hunglun.com/passport): 看過的古蹟會蓋章，玩遊戲拿星星換徽章，紀錄只存在這台裝置。
+- [古蹟圖鑑](https://heritage.hunglun.com/sites): 搜尋與篩選臺灣 1,065 處古蹟：寺廟、宅第、城門、車站、燈塔，依程度看白話介紹或文資局原文，還能挑兩處比一比。
+- [教師專區](https://heritage.hunglun.com/teacher): 依縣市或古蹟類型一鍵產生學習單（國小低中高年級），附答案；還有全班搶答的計分板與倒數計時器。
+- [時代排排看](https://heritage.hunglun.com/timeline): 把古蹟依建造年代排順序，認識荷西、明鄭、清領、日治、戰後五個時期。
+- [看建築認類型](https://heritage.hunglun.com/types): 看古蹟照片，猜猜它是寺廟、教堂、車站、牌坊、燈塔還是城門？還有 60 秒挑戰。
